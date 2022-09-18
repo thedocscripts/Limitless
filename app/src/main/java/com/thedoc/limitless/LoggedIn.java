@@ -30,7 +30,7 @@ public class LoggedIn extends AppCompatActivity {
 
 
         TextView tt = (TextView) findViewById(R.id.s2tt);
-
+        //
         tt.setText("Bienvenido " + user.getEmail().toString());
 
         ss.setOnClickListener(new View.OnClickListener() {
