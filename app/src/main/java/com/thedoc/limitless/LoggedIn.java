@@ -11,7 +11,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -19,8 +18,6 @@ import android.widget.Toast;
 
 
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
@@ -28,9 +25,12 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class LoggedIn extends AppCompatActivity {
@@ -45,6 +45,7 @@ public class LoggedIn extends AppCompatActivity {
     int cci = -1;
     String Author;
     String dat;
+    List<String> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -114,7 +115,6 @@ public class LoggedIn extends AppCompatActivity {
                 // Create a new user with a first and last name
                 Map<String, Object> userr = new HashMap<>();
                 Map<String, Object> datt = new HashMap<>();
-
                 userr.put("Tasks", datt);
 
 
@@ -165,4 +165,27 @@ public class LoggedIn extends AppCompatActivity {
             return false;
         }
     }
+
+    public int RoomIDGenerator() {
+
+        ///Firstly check for existing rooms, then create lobby if non existent
+        db.collection("root_collection").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if (task.isSuccessful()) {
+                    list = new ArrayList<>();
+                    for (QueryDocumentSnapshot document : task.getResult()) {
+                        list.add(document.getId());
+                    }
+                    Log.d(TAG, list.toString());
+                } else {
+                    Log.d(TAG, "Error getting documents: ", task.getException());
+                }
+            }
+        });
+        System.out.println(list);
+        return 1;
+    }
 }
+
+
