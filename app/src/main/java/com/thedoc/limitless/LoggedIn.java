@@ -5,16 +5,19 @@ import static android.content.ContentValues.TAG;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+<<<<<<< HEAD
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+=======
+import android.widget.Button;
+>>>>>>> parent of 764d9e3 (update)
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -22,6 +25,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+<<<<<<< HEAD
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -47,6 +51,11 @@ public class LoggedIn extends AppCompatActivity {
     String dat;
     List<String> list;
 
+=======
+
+public class LoggedIn extends AppCompatActivity {
+    FirebaseAuth mAuth;
+>>>>>>> parent of 764d9e3 (update)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,23 +63,39 @@ public class LoggedIn extends AppCompatActivity {
 
 
         mAuth = FirebaseAuth.getInstance();
+<<<<<<< HEAD
         user = mAuth.getCurrentUser();
         db = FirebaseFirestore.getInstance();
+=======
+        FirebaseUser user = mAuth.getCurrentUser();
+
+
+
+        Button ss = (Button) findViewById(R.id.button);
+
+>>>>>>> parent of 764d9e3 (update)
 
         TextView tt = (TextView) findViewById(R.id.s2tt);
         //
         tt.setText("Bienvenido " + user.getEmail().toString());
 
+<<<<<<< HEAD
 
         listView = findViewById(R.id.ListView);
         button = findViewById(R.id.floatingActionButton);
 
         button.setOnClickListener(new View.OnClickListener() {
+=======
+        ss.setOnClickListener(new View.OnClickListener() {
+>>>>>>> parent of 764d9e3 (update)
             @Override
             public void onClick(View view) {
-                addItem(view);
+                FirebaseAuth.getInstance().signOut();
+                Intent myIntent = new Intent(LoggedIn.this, MainActivity.class);
+                LoggedIn.this.startActivity(myIntent);
             }
         });
+<<<<<<< HEAD
 
         items = new ArrayList<>();
         itemsAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, items);
@@ -131,6 +156,8 @@ public class LoggedIn extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Please add an item", Toast.LENGTH_LONG
             ).show();
         }
+=======
+>>>>>>> parent of 764d9e3 (update)
     }
 
     public Boolean checkifemptycode(String code) {

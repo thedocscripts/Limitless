@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".LoggedIn">
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="412dp"
+        android:layout_height="39dp"
+        android:text="@string/logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
     <TextView
         android:id="@+id/s2tt"
         android:layout_width="0dp"
@@ -13,9 +25,11 @@
         android:text=""
         android:textAlignment="center"
         android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
+<<<<<<< HEAD
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
@@ -56,4 +70,8 @@
         app:layout_constraintHorizontal_bias="0.32"
         app:layout_constraintStart_toStartOf="parent" />
 
+=======
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024" />
+>>>>>>> parent of 764d9e3 (update)
 </androidx.constraintlayout.widget.ConstraintLayout>

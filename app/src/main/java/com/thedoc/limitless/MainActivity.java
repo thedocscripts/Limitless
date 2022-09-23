@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
     private void LoginAccount(String email, String password) {
         // [START create_user_with_email]
 
-        loader.setMessage("Loggin in...");
+        loader.setMessage("Logging in...");
         loader.show();
 
         mAuth.signInWithEmailAndPassword(email, password)
