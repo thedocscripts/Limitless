@@ -10,10 +10,14 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+=======
+import android.widget.Button;
+>>>>>>> parent of 764d9e3 (update)
 =======
 import android.widget.Button;
 >>>>>>> parent of 764d9e3 (update)
@@ -25,6 +29,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+<<<<<<< HEAD
 <<<<<<< HEAD
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -56,6 +61,11 @@ public class LoggedIn extends AppCompatActivity {
 public class LoggedIn extends AppCompatActivity {
     FirebaseAuth mAuth;
 >>>>>>> parent of 764d9e3 (update)
+=======
+
+public class LoggedIn extends AppCompatActivity {
+    FirebaseAuth mAuth;
+>>>>>>> parent of 764d9e3 (update)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,15 +74,21 @@ public class LoggedIn extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 <<<<<<< HEAD
+<<<<<<< HEAD
         user = mAuth.getCurrentUser();
         db = FirebaseFirestore.getInstance();
 =======
+=======
+>>>>>>> parent of 764d9e3 (update)
         FirebaseUser user = mAuth.getCurrentUser();
 
 
 
         Button ss = (Button) findViewById(R.id.button);
 
+<<<<<<< HEAD
+>>>>>>> parent of 764d9e3 (update)
+=======
 >>>>>>> parent of 764d9e3 (update)
 
         TextView tt = (TextView) findViewById(R.id.s2tt);
@@ -80,11 +96,15 @@ public class LoggedIn extends AppCompatActivity {
         tt.setText("Bienvenido " + user.getEmail().toString());
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         listView = findViewById(R.id.ListView);
         button = findViewById(R.id.floatingActionButton);
 
         button.setOnClickListener(new View.OnClickListener() {
+=======
+        ss.setOnClickListener(new View.OnClickListener() {
+>>>>>>> parent of 764d9e3 (update)
 =======
         ss.setOnClickListener(new View.OnClickListener() {
 >>>>>>> parent of 764d9e3 (update)
@@ -95,6 +115,7 @@ public class LoggedIn extends AppCompatActivity {
                 LoggedIn.this.startActivity(myIntent);
             }
         });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         items = new ArrayList<>();
@@ -156,6 +177,8 @@ public class LoggedIn extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Please add an item", Toast.LENGTH_LONG
             ).show();
         }
+=======
+>>>>>>> parent of 764d9e3 (update)
 =======
 >>>>>>> parent of 764d9e3 (update)
     }

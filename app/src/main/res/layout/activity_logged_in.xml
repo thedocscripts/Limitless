@@ -30,6 +30,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
 <<<<<<< HEAD
+<<<<<<< HEAD
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
@@ -70,6 +71,10 @@
         app:layout_constraintHorizontal_bias="0.32"
         app:layout_constraintStart_toStartOf="parent" />
 
+=======
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024" />
+>>>>>>> parent of 764d9e3 (update)
 =======
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.024" />
