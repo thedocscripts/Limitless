@@ -8,14 +8,14 @@
 
     <TextView
         android:id="@+id/s2tt"
-        android:layout_width="282dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="477dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="4dp"
         android:text=""
         android:textAlignment="center"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.124"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -43,8 +43,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="409dp"
-        android:layout_height="646dp"
+        android:layout_width="470dp"
+        android:layout_height="292dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="1dp"
@@ -62,13 +62,15 @@
 
     <EditText
         android:id="@+id/AdditemInp"
-        android:layout_width="312dp"
-        android:layout_height="wrap_content"
+        android:layout_width="449dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="8dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="@string/add_item"
+        android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintHorizontal_bias="0.73"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button

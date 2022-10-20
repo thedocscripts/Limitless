@@ -2,10 +2,14 @@ package com.thedoc.limitless;
 
 import static android.content.ContentValues.TAG;
 
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -29,7 +33,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        if (ContextCompat.checkSelfPermission(
+                this, Manifest.permission.QUERY_ALL_PACKAGES) ==
+                PackageManager.PERMISSION_GRANTED) {
+            // You can use the API that requires the permission.
 
+        }
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
 
